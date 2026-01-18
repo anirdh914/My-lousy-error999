@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>LOUSYERROR ACCESS</title>
+
+  <!-- CSS -->
+  <style>
+    body{
+      margin:0;
+      height:100vh;
+      background:#020617;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      font-family:Arial, sans-serif;
+      color:white;
+    }
+
+    .container{
+      width:320px;
+      padding:20px;
+      background:#0f172a;
+      border-radius:12px;
+      box-shadow:0 0 20px #22d3ee;
+      text-align:center;
+    }
+
+    h1{
+      margin:0;
+      color:#22d3ee;
+    }
+
+    .tag{
+      font-size:12px;
+      color:#94a3b8;
+      margin-bottom:15px;
+    }
+
+    input, button{
+      width:100%;
+      padding:10px;
+      margin-top:10px;
+      border:none;
+      border-radius:8px;
+      outline:none;
+    }
+
+    button{
+      background:#22d3ee;
+      color:black;
+      font-weight:bold;
+      cursor:pointer;
+    }
+
+    .buy{
+      background:transparent;
+      border:1px solid #22d3ee;
+      color:#22d3ee;
+    }
+
+    #msg{
+      margin-top:10px;
+      color:red;
+      font-size:13px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>LOUSYERROR</h1>
+  <p class="tag">Enter Access Key</p>
+
+  <input type="password" id="keyInput" placeholder="Enter Key">
+  <button onclick="checkKey()">LOGIN</button>
+
+  <!-- BUY KEY -->
+  <button class="buy" onclick="buyKey()">Buy Key</button>
+
+  <p id="msg"></p>
+</div>
+
+<!-- JS (ENDING ME) -->
+<script>
+function checkKey(){
+  const key = document.getElementById("keyInput").value;
+
+  if(key === "@LOUSYERROR"){
+    localStorage.setItem("lousy_access","true");
+    window.location.href = "index.html"; // dashboard page
+  }else{
+    document.getElementById("msg").innerText = "❌ Invalid Key";
+  }
+}
+
+function buyKey(){
+  window.open("https://t.me/LOUSYERROR", "_blank");
+}
+</script>
+
+</body>
+</html>
