@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LOUSYERROR DASHBOARD</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="mainAppView" class="main-container">
+  <div class="header">LOUSYERROR AI</div>
+  
+  <div class="card">
+    <div id="currentPeriod">Period: --</div>
+    <div id="liveTime">Time: --:--:--</div>
+    <div id="predictionBox" class="prediction-box">WAIT</div>
+  </div>
+
+  <div class="results-header">
+    <span class="results-title">Past Results</span>
+  </div>
+  <div id="historyList" class="history-container">No predictions yet</div>
+
+  <div class="bottom-nav">
+    <button class="nav-button active" data-page="home">Home</button>
+    <button class="nav-button" data-page="history">History</button>
+    <button class="nav-button" data-page="profile">Profile</button>
+  </div>
+
+  <div id="profilePage" class="page-section">
+    <div class="card">
+      <h3>Profile</h3>
+      <div>Access Key: <span id="profileAccessKey">@LOUSYERROR</span></div>
+      <div>Device ID: <span id="profileDeviceId">LOUSY1234</span></div>
+      <div>Total Wins: <span id="totalWins">0</span></div>
+      <div>Total Losses: <span id="totalLosses">0</span></div>
+      <button id="logoutButton" class="logout-button">Logout</button>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
