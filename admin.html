@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ADMIN PANEL</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h2>Admin Result Panel</h2>
+<button onclick="setResult('RED')">RED</button>
+<button onclick="setResult('GREEN')">GREEN</button>
+<button onclick="setResult('VIOLET')">VIOLET</button>
+
+<p id="msg"></p>
+
+<script>
+function setResult(r){
+  localStorage.setItem("ADMIN_RESULT", r);
+  document.getElementById("msg").innerText = "Result set: " + r;
+}
+</script>
+</body>
+</html>
